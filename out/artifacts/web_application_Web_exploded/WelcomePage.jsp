@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="resources/css/styles.css" type='text/css'>
 </head>
 <body>
-
 <div id="userMessage">
     <h1>${userWelcomeMessage}</h1>
 </div>

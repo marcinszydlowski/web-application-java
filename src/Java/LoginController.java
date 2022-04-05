@@ -1,3 +1,4 @@
+//--server-end--//
 package Java;
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -6,6 +7,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.WebServlet;
 
+
+//verify login form and undertake appropriate action
 @WebServlet("/Login")
 public class LoginController extends HttpServlet {
 
@@ -15,8 +18,8 @@ public class LoginController extends HttpServlet {
         String pass = req.getParameter("password");
 
         if (user.equals("admin") && pass.equals("admin")) {
-            req.setAttribute("userWelcomeMessage", "Welcome back: "+ user);
-            req.getRequestDispatcher("/WelcomePage.jsp").forward(req,res);
+            req.setAttribute("userWelcomeMessage", "Welcome back "+ user + " !");
+            req.getRequestDispatcher("/welcomePage.jsp").forward(req,res);
         }
         else if (user.equals("") || pass.equals("")) {
             req.setAttribute("errorMessage", "Please enter your credentials before trying to sign in.");
