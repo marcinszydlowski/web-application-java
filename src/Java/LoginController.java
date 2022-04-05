@@ -1,29 +1,29 @@
 package Java;
-
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.annotation.WebServlet;
 
-
+@WebServlet("/Login")
 public class LoginController extends HttpServlet {
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
 
-        PrintWriter pw = response.getWriter();
-        response.setContentType("text/html");
-
-        String user = request.getParameter("username");
-        String pass = request.getParameter("password");
+        String user = req.getParameter("username");
+        String pass = req.getParameter("password");
 
         if (user.equals("admin") && pass.equals("admin")) {
-            response.sendRedirect("success.html");
-            pw.println("Login Success!");
-        } else {
-            response.sendRedirect("error.html");
-            pw.println("Login Failed...!");
+            req.setAttribute("userWelcomeMessage", "Welcome back: "+ user);
+            req.getRequestDispatcher("/WelcomePage.jsp").forward(req,res);
+        }
+        else if (user.equals("") || pass.equals("")) {
+            req.setAttribute("errorMessage", "Please enter your credentials before trying to sign in.");
+        }
+        else {
+            req.setAttribute("errorMessage", "Invalid login and password. Please try again.");
+            req.getRequestDispatcher("/index.jsp").forward(req,res);
         }
     }
 }

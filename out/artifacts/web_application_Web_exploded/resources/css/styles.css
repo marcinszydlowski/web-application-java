@@ -1,0 +1,13 @@
+#loginForm {
+    display: flex;
+    position: relative;
+    margin-right: 1%;
+}
+
+#errorMessage {
+    color: red;
+}
+
+#userMessage {
+    color: blue;
+}
