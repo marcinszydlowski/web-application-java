@@ -1,4 +1,3 @@
-<jsp:useBean id="errorMessage" scope="request" type="Java"/>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>

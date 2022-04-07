@@ -7,6 +7,15 @@
         <element id="directory" name="classes">
           <element id="module-output" name="web-application" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="JUnit4" module-name="web-application" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/jwebunit-3.2-release/jwebunit-core-3.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/jwebunit-3.2-release/jwebunit-htmlunit-plugin-3.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/mockito-core-3.12.4.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/mockserver-client-3.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/mockserver-core-3.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/molten-test-mockito-autoconfigure-1.2.3.jar" />
+        </element>
       </element>
     </root>
   </artifact>

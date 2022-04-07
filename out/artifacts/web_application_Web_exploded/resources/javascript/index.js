@@ -1,4 +1,4 @@
-//front-end
+//--front-end--//
 
 //check if user inserted any data to inputs before sending the form
 function checkInput() {

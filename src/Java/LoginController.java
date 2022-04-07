@@ -1,18 +1,19 @@
 //--server-end--//
 package Java;
-import java.io.IOException;
+
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.annotation.WebServlet;
+import java.io.IOException;
 
 
 //verify login form and undertake appropriate action
 @WebServlet("/Login")
 public class LoginController extends HttpServlet {
 
-    protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
+    public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
 
         String user = req.getParameter("username");
         String pass = req.getParameter("password");
