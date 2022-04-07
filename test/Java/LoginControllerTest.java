@@ -2,6 +2,7 @@ package Java;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,8 +12,10 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.CoreMatchers.equalTo;
 
 
+//test login controller
 public class LoginControllerTest {
 
+    //create instance variable
     private WebDriver driver;
 
     @Before
@@ -25,6 +28,7 @@ public class LoginControllerTest {
     }
 
     @Test
+    @DisplayName("should simulate login and verify if successful.")
     public void shouldSimulateLoginAndVerifyIfSuccessful() {
         //verify user credentials
         enterCredentials("admin", "admin");
