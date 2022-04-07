@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.CoreMatchers.equalTo;
 
@@ -50,6 +51,7 @@ public class LoginControllerTest {
     private void verifyTitle(String expectedTitle) {
         //get the title of the page
         String actualTitle = driver.getTitle();
+
         // verify title
         assertThat(actualTitle, equalTo(expectedTitle));
     }
