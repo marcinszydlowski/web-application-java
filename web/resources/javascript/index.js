@@ -13,10 +13,15 @@ function checkInput() {
     }
 }
 
+//jquery library
 $(function(){
+
+    //make button disappear
     function jquery() {
         $("#btn").hide()
         console.log("jquery loaded")
     }
+
+    //call function
     jquery()
 });

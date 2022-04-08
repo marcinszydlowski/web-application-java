@@ -14,7 +14,6 @@ import static org.hamcrest.CoreMatchers.equalTo;
 
 //test login controller
 public class LoginControllerTest {
-
     //create variable for unit driver
     private WebDriver driver;
 
