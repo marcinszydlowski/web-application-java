@@ -12,3 +12,11 @@ function checkInput() {
         return true;
     }
 }
+
+$(function(){
+    function jquery() {
+        $("#btn").hide()
+        console.log("jquery")
+    }
+    jquery()
+});

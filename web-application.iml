@@ -11,6 +11,7 @@
         </webroots>
         <sourceRoots>
           <root url="file://$MODULE_DIR$/src" />
+          <root url="file://$MODULE_DIR$/web/resources" />
         </sourceRoots>
       </configuration>
     </facet>
@@ -421,5 +422,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="jQuery" level="application" />
+    <orderEntry type="library" name="@types/jquery" level="application" />
   </component>
 </module>

@@ -15,7 +15,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 //test login controller
 public class LoginControllerTest {
 
-    //create instance variable
+    //create variable for unit driver
     private WebDriver driver;
 
     @Before
@@ -39,7 +39,7 @@ public class LoginControllerTest {
 
     //method to simulate login process
     private void enterCredentials(String user, String pass) {
-        //fetch username and password input boxes
+        //get username and password input boxes
         WebElement elementUser = driver.findElement(By.name("username"));
         WebElement elementPass = driver.findElement(By.name("password"));
 
@@ -56,7 +56,7 @@ public class LoginControllerTest {
         //get the title of the page
         String actualTitle = driver.getTitle();
 
-        // verify title
+        //verify title
         assertThat(actualTitle, equalTo(expectedTitle));
     }
 }
