@@ -13,10 +13,8 @@ function checkInput() {
     }
 }
 
+//jquery library
 $(function(){
-    function jquery() {
-        $("#btn").hide()
-        console.log("jquery")
-    }
-    jquery()
+    $("#btn").hide()
+    console.log("jquery loaded")
 });

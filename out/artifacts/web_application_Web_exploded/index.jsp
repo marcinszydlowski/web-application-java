@@ -1,6 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<html lang="en">
 <head>
     <title>Login Form</title>
     <meta charset="UTF-8">
@@ -18,8 +17,8 @@
 <div id="errorMessage">
     <p>${errorMessage}</p>
 </div>
-<script src="resources/javascript/index.js"></script>
 <input id="btn" class="btn" type="button" value="Run Hello World">
+<script src="resources/javascript/index.js"></script>
 </body>
 </html>
 
